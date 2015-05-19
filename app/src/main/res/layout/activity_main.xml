@@ -6,7 +6,277 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="random.lightsout.MainActivity">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:stretchColumns="0,1,2,3,4"
+            android:id="@+id/table_layout_id">
+
+
+            <TableRow
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""
+                    android:tag="0,0"
+                    android:id="@+id/toggleButton00"
+                    android:layout_column="0" />
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""
+                    android:tag="0,1"
+                    android:id="@+id/toggleButton01"
+                    android:layout_column="1" />
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""
+                    android:tag="0,2"
+                    android:id="@+id/toggleButton02"
+                    android:layout_column="2" />
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""
+                    android:tag="0,3"
+                    android:id="@+id/toggleButton03"
+                    android:layout_column="3" />
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""
+                    android:tag="0,4"
+                    android:id="@+id/toggleButton04"
+                    android:layout_column="4" />
+            </TableRow>
+
+            <TableRow
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""
+                    android:tag="1,0"
+                    android:id="@+id/toggleButton10"
+                    android:layout_column="0" />
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""
+                    android:tag="1,1"
+                    android:id="@+id/toggleButton11"
+                    android:layout_column="1" />
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""
+                    android:tag="1,2"
+                    android:id="@+id/toggleButton12"
+                    android:layout_column="2" />
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""
+                    android:tag="1,3"
+                    android:id="@+id/toggleButton13"
+                    android:layout_column="3" />
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""
+                    android:tag="1,4"
+                    android:id="@+id/toggleButton14"
+                    android:layout_column="4" />
+            </TableRow>
+
+            <TableRow
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""
+                    android:tag="2,0"
+                    android:id="@+id/toggleButton20"
+                    android:layout_column="0" />
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""
+                    android:tag="2,1"
+                    android:id="@+id/toggleButton21"
+                    android:layout_column="1" />
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""
+                    android:tag="2,2"
+                    android:id="@+id/toggleButton22"
+                    android:layout_column="2" />
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""
+                    android:tag="2,3"
+                    android:id="@+id/toggleButton23"
+                    android:layout_column="3" />
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""
+                    android:tag="2,4"
+                    android:id="@+id/toggleButton24"
+                    android:layout_column="4" />
+            </TableRow>
+
+            <TableRow
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""
+                    android:tag="3,0"
+                    android:id="@+id/toggleButton30"
+                    android:layout_column="0" />
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""
+                    android:tag="3,1"
+                    android:id="@+id/toggleButton31"
+                    android:layout_column="1" />
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""
+                    android:tag="3,2"
+                    android:id="@+id/toggleButton32"
+                    android:layout_column="2" />
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""
+                    android:tag="3,3"
+                    android:id="@+id/toggleButton33"
+                    android:layout_column="3" />
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""
+                    android:tag="3,4"
+                    android:id="@+id/toggleButton34"
+                    android:layout_column="4" />
+            </TableRow>
+
+            <TableRow
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""
+                    android:tag="4,0"
+                    android:id="@+id/toggleButton40"
+                    android:layout_column="0" />
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""
+                    android:tag="4,1"
+                    android:id="@+id/toggleButton41"
+                    android:layout_column="1" />
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""
+                    android:tag="4,2"
+                    android:id="@+id/toggleButton42"
+                    android:layout_column="2" />
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""
+                    android:tag="4,5"
+                    android:id="@+id/toggleButton43"
+                    android:layout_column="3" />
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""
+                    android:tag="4,4"
+                    android:id="@+id/toggleButton44"
+                    android:layout_column="4" />
+            </TableRow>
+
+        </TableLayout>
 
 </RelativeLayout>
