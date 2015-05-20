@@ -27,4 +27,11 @@ public class Grid {
     public void updateState(int row, int column, boolean status) {
         states[row][column] = status;
     }
+
+    public boolean isLegal(int row, int column) {
+        if(row >= MAX_ROW || column >= MAX_COLUMN) {
+            return false;
+        }
+        return true;
+    }
 }

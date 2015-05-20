@@ -46,6 +46,9 @@ public class MainActivity extends Activity {
     }
 
     public void onClick(View v) {
+        int row = Integer.parseInt(v.getTag().toString().split(",")[0]);
+        int column = Integer.parseInt(v.getTag().toString().split(",")[1]);
+
         ToggleButton toggleButton = (ToggleButton) v.findViewWithTag(v.getTag());
         toggleButton.setTextOn("Changed!");
     }
