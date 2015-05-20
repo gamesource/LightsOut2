@@ -5,17 +5,19 @@ import android.os.Bundle;
 import android.view.*;
 import android.widget.*;
 
+import random.model.Grid;
+
 
 public class MainActivity extends Activity {
 
-    private final int MAX_ROW = 5;
-    private final int MAX_COLUMN = 5;
+    private Grid gridInstance;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        gridInstance = new Grid();
      /*   TableLayout tableLayout = (TableLayout) findViewById(R.id.table_layout_id);
 
 
@@ -41,15 +43,11 @@ public class MainActivity extends Activity {
 */
 
 
+    }
 
-
-
-
-
-
-
-
-
+    public void onClick(View v) {
+        ToggleButton toggleButton = (ToggleButton) v.findViewWithTag(v.getTag());
+        toggleButton.setTextOn("Changed!");
     }
 
     @Override
