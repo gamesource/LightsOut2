@@ -286,7 +286,7 @@
                     android:text=""
                     android:textOff=""
                     android:textOn=""
-                    android:tag="4,5"
+                    android:tag="4,3"
                     android:onClick="onClick"
                     android:id="@+id/toggleButton43"
                     android:layout_column="3" />

@@ -24,12 +24,12 @@ public class Grid {
         return states[row][column];
     }
 
-    public void updateState(int row, int column, boolean status) {
-        states[row][column] = status;
+    public void updateState(int row, int column) {
+        states[row][column] = !states[row][column];
     }
 
     public boolean isLegal(int row, int column) {
-        if(row >= MAX_ROW || column >= MAX_COLUMN) {
+        if(row >= MAX_ROW || row < 0 || column >= MAX_COLUMN || column < 0) {
             return false;
         }
         return true;

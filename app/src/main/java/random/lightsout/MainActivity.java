@@ -11,6 +11,7 @@ import random.model.Grid;
 public class MainActivity extends Activity {
 
     private Grid gridInstance;
+    private TableLayout tableLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +19,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         gridInstance = new Grid();
+        tableLayout = (TableLayout) findViewById(R.id.table_layout_id);
      /*   TableLayout tableLayout = (TableLayout) findViewById(R.id.table_layout_id);
 
 
@@ -49,8 +51,37 @@ public class MainActivity extends Activity {
         int row = Integer.parseInt(v.getTag().toString().split(",")[0]);
         int column = Integer.parseInt(v.getTag().toString().split(",")[1]);
 
-        ToggleButton toggleButton = (ToggleButton) v.findViewWithTag(v.getTag());
-        toggleButton.setTextOn("Changed!");
+        ToggleButton toggleButton = (ToggleButton) tableLayout.findViewWithTag(v.getTag());
+        gridInstance.updateState(row, column);
+
+        int fix_row = 1;
+        int fix_column = 0;
+        for(int index = 0; index < 4; index++) {
+            if(gridInstance.isLegal(row + fix_row, column + fix_column)) {
+                ToggleButton neighbour = (ToggleButton) tableLayout.findViewWithTag((row + fix_row) + "," + (column + fix_column));
+                if(gridInstance.isActive(row + fix_row, column + fix_column)) {
+                    neighbour.setChecked(false);
+                }
+                else {
+                    neighbour.setChecked(true);
+                }
+                gridInstance.updateState(row + fix_row, column + fix_column);
+
+
+            }
+            if(index == 0) {
+                fix_row = (-1);
+                fix_column = 0;
+            }
+            else if(index == 1) {
+                fix_row = 0;
+                fix_column = 1;
+            }
+            else if(index == 2) {
+                fix_row = 0;
+                fix_column = (-1);
+            }
+        }
     }
 
     @Override
