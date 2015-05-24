@@ -34,4 +34,17 @@ public class Grid {
         }
         return true;
     }
+
+    public void setNewGame(int[][] newGame) {
+        for(int row = 0; row < MAX_ROW; row++) {
+            for(int column = 0; column < MAX_COLUMN; column++) {
+                states[row][column] = newGame[row][column] == 0?false:true;
+            }
+
+        }
+    }
+
+    public boolean[][] getStates() {
+        return states;
+    }
 }
