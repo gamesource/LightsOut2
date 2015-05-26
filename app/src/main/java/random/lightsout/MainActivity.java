@@ -25,38 +25,12 @@ public class MainActivity extends Activity {
         gridInstance = new Grid();
         tableLayout = (TableLayout) findViewById(R.id.table_layout_id);
 
-
-     /*   TableLayout tableLayout = (TableLayout) findViewById(R.id.table_layout_id);
-
-
-        for (int row = 0; row < MAX_ROW; row++) {
-
-            TableRow tableRow = new TableRow(this);
-            tableLayout.addView(tableRow);
-
-            for (int column = 0; column < MAX_COLUMN; column++) {
-
-                final ToggleButton toggleButton = new ToggleButton(this);
-                toggleButton.setText(row + "x" + column);
-                toggleButton.setTextOff("");
-                toggleButton.setTextOn("");
-                toggleButton.setTag(row + "," + column);
-                tableRow.addView(toggleButton);
-
-            }
-        }
-
-        ToggleButton view = (ToggleButton)tableLayout.findViewWithTag("1,3");
-        view.setTextOn("Changed!");
-*/
-
-
+        gridInstance.setNewGame(sampleGames[((int) (Math.random() * 3))]);
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        gridInstance.setNewGame(sampleGames[((int) (Math.random() * 3))]);
 
         boolean[][] newGame = gridInstance.getStates();
         for(int row = 0; row < 5; row++) {
@@ -73,8 +47,9 @@ public class MainActivity extends Activity {
     }
 
     public void onClick(View v) {
-        int row = Integer.parseInt(v.getTag().toString().split(",")[0]);
-        int column = Integer.parseInt(v.getTag().toString().split(",")[1]);
+        String tag = v.getTag().toString();
+        int row = Integer.parseInt(tag.split(",")[0]);
+        int column = Integer.parseInt(tag.split(",")[1]);
 
         int fix_row = 0;
         int fix_column = 0;
@@ -95,7 +70,7 @@ public class MainActivity extends Activity {
                 fix_column = 0;
             }
             else if(index == 1) {
-                fix_row = -1;
+                fix_row = (-1);
                 fix_column = 0;
             }
             else if(index == 2) {
